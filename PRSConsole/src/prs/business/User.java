@@ -1,3 +1,4 @@
+package prs.business;
 
 public class User {
 
@@ -8,10 +9,11 @@ public class User {
 	private String lastname;
 	private String phoneNumber;
 	private String email;
-	private int isReviewer;
+	private boolean isReviewer;
+	private boolean isAdmin;
 	
 	public User(int iD, String username, String password, String firstname, String lastname, String phoneNumber,
-			String email, int isReviewer) {
+			String email, boolean isReviewer, boolean isAdmin) {
 		id = iD;
 		this.username = username;
 		this.password = password;
@@ -20,6 +22,7 @@ public class User {
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 		this.isReviewer = isReviewer;
+		this.isAdmin = isAdmin;
 	}
 
 	public int getID() {
@@ -78,14 +81,21 @@ public class User {
 		this.email = email;
 	}
 
-	public int getIsReviewer() {
+	public boolean isReviewer() {
 		return isReviewer;
 	}
 
-	public void setIsReviewer(int isReviewer) {
+	public void setIsReviewer(boolean isReviewer) {
 		this.isReviewer = isReviewer;
 	}
 	
+	public boolean isAdmin() {
+		return isAdmin;
+	}
+
+	public void setIsAdmin(boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
 	
 	
 }

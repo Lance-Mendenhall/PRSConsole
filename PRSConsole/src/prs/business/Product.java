@@ -1,3 +1,4 @@
+package prs.business;
 
 public class Product {
 
@@ -19,6 +20,18 @@ public class Product {
 		Unit = unit;
 		this.photoPath = photoPath;
 	}
+
+	
+
+	public Product(int vendorID, String partNumber, String name, double price) {
+		super();
+		this.vendorID = vendorID;
+		this.partNumber = partNumber;
+		this.name = name;
+		this.price = price;
+	}
+
+
 
 	public int getId() {
 		return id;
@@ -75,6 +88,13 @@ public class Product {
 	public void setPhotoPath(String photoPath) {
 		this.photoPath = photoPath;
 	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", vendorID=" + vendorID + ", partNumber=" + partNumber + ", name=" + name
+				+ ", price=" + price + ", Unit=" + Unit + ", photoPath=" + photoPath + "]";
+	}
+	
 	
 	
 	
